@@ -1,0 +1,30 @@
+<div class="container card p-5" style="background-color:#1A1423;     margin-left: 60px; ">
+    <h2 style="color: white !important">Performances</h2>
+    <div class="container row">
+        
+        <!-- //need to show performances an card with performance_id, date, time, available_tickets -->
+        <div class="col card m-4"  *ngFor="let performance of performances">
+            <p style="color: white!important">{{ performance.performance_name }}</p>
+            <p class="card-text">Date: {{ performance.date }}</p>
+            <p class="card-text">Time: {{ performance.time }}</p>
+            <p class="card-text">Available Tickets: {{ performance.available_tickets }}</p>
+            
+            
+        </div>
+        
+    </div>
+ 
+
+    <button (click)="enterLottery()" class="btn" style="background-color:#690500; color: white !important;">Enter Lottery</button>
+</div>
+<div class="container p-5 w-25 card " style="border-radius: 10px; background-color: #1A1423; margin-left: -272px;
+margin-top:  -539px; overflow:auto;">
+    <h2 style="color: white !important">Lottery Entries</h2>
+    <div class="col-12 m-4"  *ngFor="let user of lotteryEntries">
+      <div class="card">
+          <p style="color: white !important">{{ user.username }}</p>
+          <p style="color: white !important">Tickets: {{ user.no_of_tickets }}</p>
+          <p style="color: white !important">Show Name: {{ user.performance_name }}</p>
+      </div>
+    </div>
+</div>

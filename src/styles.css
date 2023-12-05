@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+   background-image: linear-gradient(
+    var(--rotate)
+    , #684756 , #3D314A 63%, #0a0908);
+    --rotate: 20deg;
+    animation: gradient 15s ease infinite;
+    background-attachment: fixed;
+  }
+
+  @keyframes gradient {
+    0% {
+      --rotate: 0deg;
+    }
+    50% {
+      --rotate: 180deg;
+    }
+    100% {
+      --rotate: 360deg;
+    }
+  }
+

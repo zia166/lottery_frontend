@@ -1,0 +1,43 @@
+<div class="container p-5 custom-modal-overlay">
+  <div class="col-md-9 col-xs-12 text-right" style="margin-left: 179px;">
+    <button class="btn btn-outline-warning pull-right mr-lg-n4" (click)="cancelModal()">x</button>
+  </div>
+  <h1>Lottery</h1>
+  <p class="text-danger">Lottery is open until Today at 23:59</p>
+  <form method="post" name="lotteryForm" #lotteryForm="ngForm" (ngSubmit)="onRegLottery(lotteryForm.value)" autocomplete="off">
+    <div class="container p-5">
+      <div class="row">
+        <div class="col-md-9 col-xs-12">
+          <div class="form-group">
+            <label for="Tickets">Enter number of tickets</label>
+            <input type="number" class="form-control" name="Tickets" [(ngModel)]="Tickets">
+          </div>
+         <div class="form-group">
+           <label for="ShowName">Enter Show Name</label>
+           <select class="form-control" name="ShowName" [(ngModel)]="ShowName">
+             <option *ngFor="let show of performances" [value]="show.performance_name">{{ show.performance_name }}</option>
+           </select>
+         </div>
+          <div class="form-group">
+            <label for="ShowDate">Enter Show Date</label>
+            <input type="date" class="form-control" name="ShowDate" [(ngModel)]="ShowDate">
+          </div>
+          <div class="form-group">
+            <label for="ShowTime">Enter Show Time</label>
+            <input type="text" class="form-control" name="ShowTime" [(ngModel)]="ShowTime" placeholder="HH:MM">
+          </div>
+          <div class="form-group">
+            <label for="UserName">Enter User Name</label>
+            <input type="text" class="form-control" name="UserName" [(ngModel)]="UserName">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 p-4">
+          <button id="btn" type="submit" class="btn btn-success btn-block">Submit</button>
+        </div>
+      </div>
+    </div>
+  </form>
+
+</div>

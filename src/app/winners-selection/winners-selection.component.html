@@ -1,0 +1,11 @@
+<div class="container p-5 winner" style="margin-top: -1663px;
+margin-left: 66px;
+overflow: auto;">
+    <h2>Winners Selection</h2>
+    <button class="btn " style="background-color:#3F6C51; color: white !important;" (click)="selectWinners()">View Winners</button>
+    <div class="container row">
+        <div class="col m-4"  *ngFor="let winner of winners">
+            <p style="color: white!important"> Winner is {{ winner.username }} and has received {{ winner.no_of_ticket }} tickets for {{performances}}</p>
+        </div>
+    </div>
+</div>

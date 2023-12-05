@@ -1,0 +1,42 @@
+<style>
+
+
+
+.nav-links div {
+  display: none;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.nav-links div:hover {
+  background-color: #ddd;
+}
+</style>
+
+<div class="nav">
+  <input type="checkbox" id="nav-check">
+  <div class="nav-header">
+    <div class="nav-title">
+      Lottery App
+    </div>
+  </div>
+  <div class="nav-btn">
+    <label for="nav-check">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+  
+  <div class="nav-links">
+    <div>-</div>
+    <div>-</div>
+    <div>-</div>
+  </div>
+</div>
+
+<div class="container p-5">
+  
+  <app-performance-list></app-performance-list>
+  <app-winners-selection></app-winners-selection>
+</div>
